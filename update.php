@@ -128,7 +128,7 @@ if($conn->connect_error)
 else
 {
 	//echo "Successful connection";
-	$q="UPDATE agriculturist_info SET user_name='".$_POST["uname"]."' WHERE user_name='".$_SESSION["uname"]."'";
+	$q="UPDATE agriculturist_info SET user_name='".$_POST["uname"]."',Password='".$_POST["pass"]."',Email='".$_POST["email"]."',Gender='".$_POST["gender"]."',Institute='".$_POST["institute"]."',Address='".$_POST["address"]."',About='".$_POST["bio"]."' WHERE user_name='".$_SESSION["uname"]."'";
 	$result=$conn->query($q);
 	if($result)
 	  echo "data updated";
